@@ -32,3 +32,6 @@ def on_press_keyboard(event):
         print("goooo")
 
 keyboard.on_press(on_press_keyboard)
+
+while True:
+    pass
