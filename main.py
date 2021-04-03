@@ -63,7 +63,6 @@ def on_press_keyboard(event):
             if equal_sign_press_counter > len(found_words) - 1:
                 equal_sign_press_counter = 0
     else:
-        # print(event.name)
         if len(str(event.name)) == 1:
             if re.match("^[A-Za-z0-9_-]*$", event.name):
                 words = words + str(event.name)
