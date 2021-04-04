@@ -38,37 +38,22 @@ mapping_vowel = {
     'uye6': 'uiê', 'uiê2': 'uiề', 'uiê1': 'uiế', 'uiê3': 'uiể', 'uiê4': 'uiễ', 'uiê5': 'uiệ' # Telex: uyê - > uiê
 }
 
-current_word = ''
-
-def on_press_keyboard(event):
-    global current_word
-
-    if (str(event.name).isalpha() or str(event.name).isdigit()) and len(str(event.name)) == 1:
-        if len(current_word) > 5:
-            current_word = ''
-        else:
-            current_word = current_word + str(event.name)
-
-        if current_word in mapping_consonant_type_one:
-            # keyboard.send('backspace') # remove last character
-            # keyboard.write(str(mapping_consonant_type_one[current_word]))
-            current_word = ''
-        elif current_word in mapping_consonant_type_two:
-            keyboard.send('backspace') # remove last character
-            keyboard.send('backspace') # remove second last character
-            keyboard.write(str(mapping_consonant_type_two[current_word]))
-            current_word = ''
-        elif current_word in mapping_consonant_type_three:
-            keyboard.write(str(mapping_consonant_type_three[current_word]))
-            current_word = ''
-    else:
-        current_word = ''
-
-keyboard.on_press(on_press_keyboard)
 keyboard.remap_key('q', 'k')
 keyboard.remap_key('d', 'z')
 keyboard.remap_key('r', 'z')
 keyboard.remap_key('x', 's')
+keyboard.remap_key('c', 'k')
+
+keyboard.add_abbreviation('tz', 'c')
+keyboard.add_abbreviation('gi', 'z')
+keyboard.add_abbreviation('nh', 'ń')
+keyboard.add_abbreviation('ph', 'f')
+keyboard.add_abbreviation('kh', 'x')
+keyboard.add_abbreviation('th', 'q')
+
+keyboard.add_abbreviation('kh', 'c')
+keyboard.add_abbreviation('ng', 'w')
+keyboard.add_abbreviation('wh', 'w')
 
 while True:
     pass
