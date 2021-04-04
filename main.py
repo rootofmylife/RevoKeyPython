@@ -54,7 +54,12 @@ keyboard.add_abbreviation('kkh', 'c') # ch -> c
 keyboard.add_abbreviation('ng', 'w')
 keyboard.add_abbreviation('ngh', 'w')
 
-keyboard.add_abbreviation('ia', 'iê')
+keyboard.add_abbreviation('ia', 'iê', match_suffix=True)
+keyboard.add_abbreviation('ìa', 'iề', match_suffix=True)
+keyboard.add_abbreviation('ía', 'iế', match_suffix=True)
+keyboard.add_abbreviation('ỉa', 'iể', match_suffix=True)
+keyboard.add_abbreviation('ĩa', 'iễ', match_suffix=True)
+keyboard.add_abbreviation('ịa', 'iệ', match_suffix=True)
 
 while True:
     pass
