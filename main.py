@@ -2,6 +2,8 @@ import re
 import unidecode
 import keyboard
 
+from tkinter import *
+
 mapping_scheme = {
     'c': 'k',
     'q': 'k',
@@ -27,45 +29,30 @@ mapping_scheme = {
     'uyê': 'uiê', 'uyề': 'uiề', 'uyế': 'uiế', 'uyể': 'uiể', 'uyễ': 'uiễ', 'uyệ': 'uiệ'
 }
 
-def place_word(found_word, trigger):
-    for x in range(len(found_word) + 1):
-        keyboard.send('backspace')
-    keyboard.write(found_word)
-
-def db_search_to_list(search_term):
-    global found_words
-    if search_term.lower() in mapping_scheme:
-        found_words.append(str(mapping_scheme[search_term]))
-
-    if len(found_words) > 1:
-        print(found_words)
+break_word_character = ['space', 'enter', 'delete', '[', ']', '\\', ';', "'", ',', '.', '/', '`', '-', '=']
+break_word_number = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
+current_word = ''
 
 def on_press_keyboard(event):
-    global words, found_words, equal_sign_press_counter
-    if event.name == 'space' or event.name == '.' or event.name == ',' or event.name == ';' or event.name == 'enter':
-        words = ''
+    if event.name in break_word_character and event.name in break_word_number:
+        current_word = ''
     elif event.name == 'backspace':
-        if len(words) > 0:
-            words = words[:-1]
-    elif event.name == 'delete':
-        found_words = []
-    elif event.name == '=':
-        if len(str(words)) > 0:
-            search = unidecode.unidecode(words)
-            found_words = [search]
-            equal_sign_press_counter = 1
-            db_search_to_list(search)
-        words = ''
-        if len(found_words) > 1:
-            print(str(equal_sign_press_counter) + " - " + found_words[equal_sign_press_counter])
-            place_word(str(found_words[equal_sign_press_counter]), str(event.name))
-            equal_sign_press_counter = equal_sign_press_counter + 1
-            if equal_sign_press_counter > len(found_words) - 1:
-                equal_sign_press_counter = 0
+        if len(current_word) > 0:
+            current_word = current_word[:-1]
+    
+    if len(str(event.name)) == 1 and re.match("^[A-Za-z0-9_-]*$", event.name):
+        current_word = current_word + str(event.name)
+        print(current_word)
+
+    if len(str(current_word)) > 0 and len(str(current_word)) < 7:
+        search = unidecode.unidecode(current_word)
+        
+        if search.lower() in mapping_scheme:
+            for x in range(len(search) + 1):
+                keyboard.send('backspace')
+            keyboard.write(str(mapping_scheme[search]))
     else:
-        if len(str(event.name)) == 1:
-            if re.match("^[A-Za-z0-9_-]*$", event.name):
-                words = words + str(event.name)
+        current_word = ''
 
 keyboard.on_press(on_press_keyboard)
 
