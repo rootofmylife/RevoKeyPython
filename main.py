@@ -34,7 +34,7 @@ current_word = ''
 
 def on_press_keyboard(event):
     global current_word, waiting_scheme_flag
-    if event.name in break_word_character:
+    if re.match("^[A-Za-z0-9_-]*$", event.name) is False:
         current_word = ''
     elif event.name == 'backspace':
         if len(current_word) > 0:
