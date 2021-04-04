@@ -44,16 +44,17 @@ keyboard.remap_key('r', 'z')
 keyboard.remap_key('x', 's')
 keyboard.remap_key('c', 'k')
 
-keyboard.add_abbreviation('tr', 'c')
+keyboard.add_abbreviation('tz', 'c') # tr -> c
 keyboard.add_abbreviation('gi', 'z')
 keyboard.add_abbreviation('nh', 'ń')
 keyboard.add_abbreviation('ph', 'f')
 keyboard.add_abbreviation('kh', 'x')
 keyboard.add_abbreviation('th', 'q')
-
-keyboard.add_abbreviation('ch', 'c')
+keyboard.add_abbreviation('kkh', 'c') # ch -> c
 keyboard.add_abbreviation('ng', 'w')
 keyboard.add_abbreviation('ngh', 'w')
+
+keyboard.add_abbreviation('ia', 'iê')
 
 while True:
     pass
