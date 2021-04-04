@@ -1,5 +1,4 @@
 import re
-import unidecode
 import keyboard
 
 from tkinter import *
@@ -47,13 +46,11 @@ def on_press_keyboard(event):
         print(current_word)
 
     if len(str(current_word)) > 0 and len(str(current_word)) < 7:
-        search = unidecode.unidecode(current_word)
-        
-        if search.lower() in mapping_scheme:
-            for x in range(len(search)):
+        if current_word.lower() in mapping_scheme:
+            for x in range(len(current_word)):
                 keyboard.send('backspace')
-            keyboard.write(str(mapping_scheme[search]))
-            current_word = str(mapping_scheme[search])
+            keyboard.write(str(mapping_scheme[current_word]))
+            current_word = mapping_scheme[current_word]
 
 keyboard.on_press(on_press_keyboard)
 
