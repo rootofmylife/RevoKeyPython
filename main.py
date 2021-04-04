@@ -34,6 +34,7 @@ break_word_number = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
 current_word = ''
 
 def on_press_keyboard(event):
+    global current_word
     if event.name in break_word_character and event.name in break_word_number:
         current_word = ''
     elif event.name == 'backspace':
