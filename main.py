@@ -44,7 +44,7 @@ current_word = ''
 def on_press_keyboard(event):
     global current_word
 
-    if str(event.name).isalpha() or str(event.name).isdigit():
+    if (str(event.name).isalpha() or str(event.name).isdigit()) and len(str(event.name)) == 1:
         if len(current_word) > 5:
             current_word = ''
         else:
