@@ -31,16 +31,16 @@ mapping_scheme = {
     'uye6': 'uiê', 'uiê2': 'uiề', 'uiê1': 'uiế', 'uiê3': 'uiể', 'uiê4': 'uiễ', 'uiê5': 'uiệ' # Telex: uyê - > uiê
 }
 
-break_word_character = ['space', 'enter', 'delete', '[', ']', '\\', ';', "'", ',', '.', '/', '`', '-', '=']
+break_word_character = ['space', 'enter', 'delete', 'backspace', '[', ']', '\\', ';', "'", ',', '.', '/', '`', '-', '=']
 current_word = ''
 
 def on_press_keyboard(event):
     global current_word, waiting_scheme_flag
     if event.name in break_word_character:
         current_word = ''
-    elif event.name == 'backspace':
-        if len(current_word) > 0:
-            current_word = current_word[:-1]
+    # elif event.name == 'backspace':
+    #     if len(current_word) > 0:
+    #         current_word = current_word[:-1]
     
     if len(str(event.name)) == 1 and re.match("^[A-Za-z0-9_-]*$", event.name):
         current_word = current_word + str(event.name)
