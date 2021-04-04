@@ -10,10 +10,10 @@ mapping_scheme = {
     'd': 'z',
     'gi': 'z',
     'r': 'z',
-    'ch': 'c',
+    'ch': 'c', # ch -> c
     'tr': 'c',
     'ng': 'w',
-    'ngh': 'w',
+    'wh': 'w', # ngh -> w
     'nh': 'ń',
     'ph': 'f',
     'kh': 'x',
