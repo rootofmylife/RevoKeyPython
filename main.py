@@ -27,8 +27,8 @@ mapping_scheme = {
     'ua': 'uô', # end of morpho
     'uôs': 'uố', 'uôf': 'uồ', 'uôr': 'uổ', 'uôx': 'uỗ', 'uôj': 'uộ',
     'uô1': 'uố', 'uô2': 'uồ', 'uô3': 'uổ', 'uô4': 'uỗ', 'uô5': 'uộ',
-    'uyee': 'uiê', 'uyeef': 'uiề', 'uyees': 'uiế', 'uyeer': 'uiể', 'uyeex': 'uiễ', 'uyeej': 'uiệ', # Telex: uyê - > uiê
-    'uye6': 'uiê', 'uye62': 'uiề', 'uye61': 'uiế', 'uye63': 'uiể', 'uye64': 'uiễ', 'uye65': 'uiệ' # Telex: uyê - > uiê
+    'uyee': 'uiê', 'uiêf': 'uiề', 'uiês': 'uiế', 'uiêr': 'uiể', 'uiêx': 'uiễ', 'uiêj': 'uiệ', # Telex: uyê - > uiê
+    'uye6': 'uiê', 'uiê2': 'uiề', 'uiê1': 'uiế', 'uiê3': 'uiể', 'uiê4': 'uiễ', 'uiê5': 'uiệ' # Telex: uyê - > uiê
 }
 
 break_word_character = ['space', 'enter', 'delete', '[', ']', '\\', ';', "'", ',', '.', '/', '`', '-', '=']
