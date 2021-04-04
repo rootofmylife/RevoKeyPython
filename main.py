@@ -49,7 +49,7 @@ def on_press_keyboard(event):
         search = unidecode.unidecode(current_word)
         
         if search.lower() in mapping_scheme:
-            for x in range(len(search) + 1):
+            for x in range(len(search)):
                 keyboard.send('backspace')
             keyboard.write(str(mapping_scheme[search]))
     else:
