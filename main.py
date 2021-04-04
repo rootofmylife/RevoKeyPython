@@ -25,8 +25,10 @@ mapping_scheme = {
     'uai': 'ua', 'uài': 'ùa', 'uái': 'úa', 'uại': 'ụa', 'uải': 'ủa', 'uãi': 'ũa',
     'uay': 'ua', 'uày': 'ùa', 'uáy': 'úa', 'uạy': 'ụa', 'uảy': 'ủa', 'uãy': 'ũa',
     'ua': 'uô', # end of morpho
-    'úa': 'uố', 'ùa': 'uồ', 'ủa': 'uổ', 'ũa': 'uỗ', 'ụa': 'uộ',
-    'uyê': 'uiê', 'uyề': 'uiề', 'uyế': 'uiế', 'uyể': 'uiể', 'uyễ': 'uiễ', 'uyệ': 'uiệ'
+    'uôs': 'uố', 'uôf': 'uồ', 'uôr': 'uổ', 'uôx': 'uỗ', 'uôj': 'uộ',
+    'uô1': 'uố', 'uô2': 'uồ', 'uô3': 'uổ', 'uô4': 'uỗ', 'uô5': 'uộ',
+    'uyee': 'uiê', 'uyeef': 'uiề', 'uyees': 'uiế', 'uyeer': 'uiể', 'uyeex': 'uiễ', 'uyeej': 'uiệ', # Telex: uyê - > uiê
+    'uye6': 'uiê', 'uye62': 'uiề', 'uye61': 'uiế', 'uye63': 'uiể', 'uye64': 'uiễ', 'uye65': 'uiệ' # Telex: uyê - > uiê
 }
 
 break_word_character = ['space', 'enter', 'delete', '[', ']', '\\', ';', "'", ',', '.', '/', '`', '-', '=']
