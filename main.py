@@ -30,12 +30,11 @@ mapping_scheme = {
 }
 
 break_word_character = ['space', 'enter', 'delete', '[', ']', '\\', ';', "'", ',', '.', '/', '`', '-', '=']
-break_word_number = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
 current_word = ''
 
 def on_press_keyboard(event):
-    global current_word
-    if event.name in break_word_character or event.name in break_word_number:
+    global current_word, waiting_scheme_flag
+    if event.name in break_word_character:
         current_word = ''
     elif event.name == 'backspace':
         if len(current_word) > 0:
@@ -52,8 +51,7 @@ def on_press_keyboard(event):
             for x in range(len(search)):
                 keyboard.send('backspace')
             keyboard.write(str(mapping_scheme[search]))
-    else:
-        current_word = ''
+            current_word = str(mapping_scheme[search])
 
 keyboard.on_press(on_press_keyboard)
 
