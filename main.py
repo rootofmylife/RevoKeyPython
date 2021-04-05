@@ -131,19 +131,19 @@ keyboard.add_abbreviation('uang4', 'ũa', match_suffix=True)
 keyboard.add_abbreviation('uang5', 'ụa', match_suffix=True)
 
 # uai -> ua
-keyboard.add_abbreviation('uai', 'ua', match_suffix=True)
+# keyboard.add_abbreviation('uai', 'ua', match_suffix=True)
 # VNI
-keyboard.add_abbreviation('uaif', 'ùa', match_suffix=True)
-keyboard.add_abbreviation('uais', 'úa', match_suffix=True)
-keyboard.add_abbreviation('uair', 'ủa', match_suffix=True)
-keyboard.add_abbreviation('uaix', 'ũa', match_suffix=True)
-keyboard.add_abbreviation('uaij', 'ụa', match_suffix=True)
+# keyboard.add_abbreviation('uaif', 'ùa', match_suffix=True)
+# keyboard.add_abbreviation('uais', 'úa', match_suffix=True)
+# keyboard.add_abbreviation('uair', 'ủa', match_suffix=True)
+# keyboard.add_abbreviation('uaix', 'ũa', match_suffix=True)
+# keyboard.add_abbreviation('uaij', 'ụa', match_suffix=True)
 # Telex
-keyboard.add_abbreviation('uai2', 'ùa', match_suffix=True)
-keyboard.add_abbreviation('uai1', 'úa', match_suffix=True)
-keyboard.add_abbreviation('uai3', 'ủa', match_suffix=True)
-keyboard.add_abbreviation('uai4', 'ũa', match_suffix=True)
-keyboard.add_abbreviation('uai5', 'ụa', match_suffix=True)
+# keyboard.add_abbreviation('uai2', 'ùa', match_suffix=True)
+# keyboard.add_abbreviation('uai1', 'úa', match_suffix=True)
+# keyboard.add_abbreviation('uai3', 'ủa', match_suffix=True)
+# keyboard.add_abbreviation('uai4', 'ũa', match_suffix=True)
+# keyboard.add_abbreviation('uai5', 'ụa', match_suffix=True)
 
 # uay -> ua
 keyboard.add_abbreviation('uay', 'ua', match_suffix=True)
@@ -205,9 +205,81 @@ def on_press_key(event):
         ### check 'i', following 'ua'
         elif str(event.name) == 'i' and current_word == 'ua':
             current_word += str(event.name)
+        elif (str(event.name) == 's' or str(event.name) == '1') and current_word == 'uai':
+            keyboard.send('backspace')
+            keyboard.send('backspace')
+            keyboard.send('backspace')
+            keyboard.write('á')
+            current_word = ''
+        elif (str(event.name) == 'f' or str(event.name) == '2') and current_word == 'uai':
+            keyboard.send('backspace')
+            keyboard.send('backspace')
+            keyboard.send('backspace')
+            keyboard.write('à')
+            current_word = ''
+        elif (str(event.name) == 'w' or str(event.name) == '3') and current_word == 'uai':
+            keyboard.send('backspace')
+            keyboard.send('backspace')
+            keyboard.send('backspace')
+            keyboard.write('ả')
+            current_word = ''
+        elif (str(event.name) == 'o' or str(event.name) == '4') and current_word == 'uai':
+            keyboard.send('backspace')
+            keyboard.send('backspace')
+            keyboard.send('backspace')
+            keyboard.write('ã')
+            current_word = ''
+        elif (str(event.name) == 'j' or str(event.name) == '5') and current_word == 'uai':
+            keyboard.send('backspace')
+            keyboard.send('backspace')
+            keyboard.send('backspace')
+            keyboard.write('ạ')
+            current_word = ''
+        elif str(event.name) == '=' and current_word == 'uai':
+            keyboard.send('backspace')
+            keyboard.send('backspace')
+            keyboard.send('backspace')
+            keyboard.write('a')
+            current_word = ''
         ### check 'y', following 'ua'
         elif str(event.name) == 'y' and current_word == 'ua':
             current_word += str(event.name)
+        elif (str(event.name) == 's' or str(event.name) == '1') and current_word == 'uay':
+            keyboard.send('backspace')
+            keyboard.send('backspace')
+            keyboard.send('backspace')
+            keyboard.write('á')
+            current_word = ''
+        elif (str(event.name) == 'f' or str(event.name) == '2') and current_word == 'uay':
+            keyboard.send('backspace')
+            keyboard.send('backspace')
+            keyboard.send('backspace')
+            keyboard.write('à')
+            current_word = ''
+        elif (str(event.name) == 'w' or str(event.name) == '3') and current_word == 'uay':
+            keyboard.send('backspace')
+            keyboard.send('backspace')
+            keyboard.send('backspace')
+            keyboard.write('ả')
+            current_word = ''
+        elif (str(event.name) == 'o' or str(event.name) == '4') and current_word == 'uay':
+            keyboard.send('backspace')
+            keyboard.send('backspace')
+            keyboard.send('backspace')
+            keyboard.write('ã')
+            current_word = ''
+        elif (str(event.name) == 'j' or str(event.name) == '5') and current_word == 'uay':
+            keyboard.send('backspace')
+            keyboard.send('backspace')
+            keyboard.send('backspace')
+            keyboard.write('ạ')
+            current_word = ''
+        elif str(event.name) == '=' and current_word == 'uay':
+            keyboard.send('backspace')
+            keyboard.send('backspace')
+            keyboard.send('backspace')
+            keyboard.write('a')
+            current_word = ''
         ### check 'n', following 'ua'
         elif str(event.name) == 'n' and current_word == 'ua':
             current_word += str(event.name)
@@ -257,7 +329,7 @@ def on_press_key(event):
             current_word = ''
 
         # check start with 'i'
-        if str(event.name) == 'i':
+        elif str(event.name) == 'i':
             current_word = str(event.name)
         # check 'a', following 'i'
         elif str(event.name) == 'a' and current_word == 'i':
@@ -292,6 +364,9 @@ def on_press_key(event):
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('ê')
+            current_word = ''
+
+        else:
             current_word = ''
 
 keyboard.on_press(on_press_key)
