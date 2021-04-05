@@ -47,6 +47,8 @@ strInput = StringVar()
 
 strOutput = StringVar()
 
+strOutput.set('trời đất ơi')
+
 tkinter.Label(window, text = "Đây là phần mềm chuyển đổi văn tự").pack()
 
 labelInput = Label(window, text="Bạn đang nhập: ").pack(expand=True)
