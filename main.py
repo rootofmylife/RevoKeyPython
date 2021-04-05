@@ -2,6 +2,7 @@ import re
 import keyboard
 import time
 
+import tkinter
 from tkinter import *
 
 showWindow = True
