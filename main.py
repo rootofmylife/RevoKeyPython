@@ -172,11 +172,11 @@ def on_press_key(event):
 
         # check start with 'i'
         if str(event.name) == 'i':
-            current_word += str(event.name)
+            current_word = str(event.name)
         # check 'a', following 'i'
         elif str(event.name) == 'a' and current_word == 'i':
             current_word += str(event.name)
-        # check 's -> iế
+        # check 's' -> iế
         elif (str(event.name) == 's' or str(event.name) == '1') and current_word == 'ia':
             keyboard.send('backspace')
             keyboard.send('backspace')
@@ -187,12 +187,12 @@ def on_press_key(event):
             keyboard.send('backspace')
             keyboard.write('ề')
             current_word = ''
-        elif (str(event.name) == 'r' or str(event.name) == '3') and current_word == 'ia':
+        elif (str(event.name) == 'w' or str(event.name) == '3') and current_word == 'ia':
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('ể')
             current_word = ''
-        elif (str(event.name) == 'x' or str(event.name) == '4') and current_word == 'ia':
+        elif (str(event.name) == 'o' or str(event.name) == '4') and current_word == 'ia':
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('ễ')
@@ -206,6 +206,8 @@ def on_press_key(event):
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('ê')
+            current_word = ''
+        else:
             current_word = ''
 
 keyboard.on_press(on_press_key)
