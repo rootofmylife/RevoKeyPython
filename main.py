@@ -67,6 +67,7 @@ def on_press_key(event):
         strInput.set(strInput.get() + str(event.name))
     else:
         strInput.set('')
+        strOutput.set('')
 
     if len(str(event.name)) == 1:
         # check start with u
