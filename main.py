@@ -11,7 +11,7 @@ from sys import exit
 showWindow = True
 
 def getHalfWindowSize(window):
-    return int(window.winfo_screenwidth() / 2) + 250, int(window.winfo_screenheight() / 1)
+    return int(window.winfo_screenwidth() / 2), int(window.winfo_screenheight() / 2)
 
 def getCoordinate(window, width, height):
     return int((window.winfo_screenwidth() / 2) - (width / 2)), int((window.winfo_screenheight() / 2) - (height / 2))
@@ -38,127 +38,6 @@ def on_closing():
         exit()
 
 window.protocol("WM_DELETE_WINDOW", on_closing)
-
-# keyboard.remap_key('q', 'k')
-# keyboard.remap_key('d', 'z')
-# keyboard.remap_key('r', 'z')
-# keyboard.remap_key('x', 's')
-# keyboard.remap_key('c', 'k')
-
-keyboard.add_abbreviation('tz', 'c') # tr -> c
-keyboard.add_abbreviation('gi', 'z')
-keyboard.add_abbreviation('nh', 'ń')
-keyboard.add_abbreviation('ph', 'f')
-keyboard.add_abbreviation('kh', 'x')
-keyboard.add_abbreviation('th', 'q')
-keyboard.add_abbreviation('kkh', 'c') # ch -> c
-keyboard.add_abbreviation('ng', 'w')
-keyboard.add_abbreviation('ngh', 'w')
-
-# ia -> iê
-# keyboard.add_abbreviation('ia', 'iê', match_suffix=True)
-# VNI
-# keyboard.add_abbreviation('iaf', 'iề', match_suffix=True)
-# keyboard.add_abbreviation('ias', 'iế', match_suffix=True)
-# keyboard.add_abbreviation('iar', 'iể', match_suffix=True)
-# keyboard.add_abbreviation('iax', 'iễ', match_suffix=True)
-# keyboard.add_abbreviation('iaj', 'iệ', match_suffix=True)
-# Telex
-# keyboard.add_abbreviation('ia2', 'iề', match_suffix=True)
-# keyboard.add_abbreviation('ia1', 'iế', match_suffix=True)
-# keyboard.add_abbreviation('ia3', 'iể', match_suffix=True)
-# keyboard.add_abbreviation('ia4', 'iễ', match_suffix=True)
-# keyboard.add_abbreviation('ia5', 'iệ', match_suffix=True)
-
-# ua -> uô
-# keyboard.add_abbreviation('ua', 'uô', match_suffix=True)
-# VNI
-# keyboard.add_abbreviation('uaf', 'uồ', match_suffix=True)
-# keyboard.add_abbreviation('uas', 'uố', match_suffix=True)
-# keyboard.add_abbreviation('uar', 'uổ', match_suffix=True)
-# keyboard.add_abbreviation('uax', 'uỗ', match_suffix=True)
-# keyboard.add_abbreviation('uaj', 'uộ', match_suffix=True)
-# VNI
-# keyboard.add_abbreviation('ua2', 'uồ', match_suffix=True)
-# keyboard.add_abbreviation('ua1', 'uố', match_suffix=True)
-# keyboard.add_abbreviation('ua3', 'uổ', match_suffix=True)
-# keyboard.add_abbreviation('ua4', 'uỗ', match_suffix=True)
-# keyboard.add_abbreviation('ua5', 'uộ', match_suffix=True)
-
-# uye -> uie
-# keyboard.add_abbreviation('uye', 'uiê', match_suffix=True)
-# VNI
-# keyboard.add_abbreviation('uyef', 'uiề', match_suffix=True)
-# keyboard.add_abbreviation('uyes', 'uiế', match_suffix=True)
-# keyboard.add_abbreviation('uyer', 'uiể', match_suffix=True)
-# keyboard.add_abbreviation('uyex', 'uiễ', match_suffix=True)
-# keyboard.add_abbreviation('uyej', 'uiệ', match_suffix=True)
-# Telex
-# keyboard.add_abbreviation('uye2', 'uiề', match_suffix=True)
-# keyboard.add_abbreviation('uye1', 'uiế', match_suffix=True)
-# keyboard.add_abbreviation('uye3', 'uiể', match_suffix=True)
-# keyboard.add_abbreviation('uye4', 'uiễ', match_suffix=True)
-# keyboard.add_abbreviation('uye5', 'uiệ', match_suffix=True)
-
-# uan -> ua
-# keyboard.add_abbreviation('uan', 'ua', match_suffix=True)
-# VNI
-# keyboard.add_abbreviation('uanf', 'ùa', match_suffix=True)
-# keyboard.add_abbreviation('uans', 'úa', match_suffix=True)
-# keyboard.add_abbreviation('uanr', 'ủa', match_suffix=True)
-# keyboard.add_abbreviation('uanx', 'ũa', match_suffix=True)
-# keyboard.add_abbreviation('uanj', 'ụa', match_suffix=True)
-# Telex
-# keyboard.add_abbreviation('uan2', 'ùa', match_suffix=True)
-# keyboard.add_abbreviation('uan1', 'úa', match_suffix=True)
-# keyboard.add_abbreviation('uan3', 'ủa', match_suffix=True)
-# keyboard.add_abbreviation('uan4', 'ũa', match_suffix=True)
-# keyboard.add_abbreviation('uan5', 'ụa', match_suffix=True)
-
-# uang -> ua
-# keyboard.add_abbreviation('uang', 'ua', match_suffix=True)
-# VNI
-# keyboard.add_abbreviation('uangf', 'ùa', match_suffix=True)
-# keyboard.add_abbreviation('uangs', 'úa', match_suffix=True)
-# keyboard.add_abbreviation('uangr', 'ủa', match_suffix=True)
-# keyboard.add_abbreviation('uangx', 'ũa', match_suffix=True)
-# keyboard.add_abbreviation('uangj', 'ụa', match_suffix=True)
-# Telex
-# keyboard.add_abbreviation('uang2', 'ùa', match_suffix=True)
-# keyboard.add_abbreviation('uang1', 'úa', match_suffix=True)
-# keyboard.add_abbreviation('uang3', 'ủa', match_suffix=True)
-# keyboard.add_abbreviation('uang4', 'ũa', match_suffix=True)
-# keyboard.add_abbreviation('uang5', 'ụa', match_suffix=True)
-
-# uai -> ua
-# keyboard.add_abbreviation('uai', 'ua', match_suffix=True)
-# VNI
-# keyboard.add_abbreviation('uaif', 'ùa', match_suffix=True)
-# keyboard.add_abbreviation('uais', 'úa', match_suffix=True)
-# keyboard.add_abbreviation('uair', 'ủa', match_suffix=True)
-# keyboard.add_abbreviation('uaix', 'ũa', match_suffix=True)
-# keyboard.add_abbreviation('uaij', 'ụa', match_suffix=True)
-# Telex
-# keyboard.add_abbreviation('uai2', 'ùa', match_suffix=True)
-# keyboard.add_abbreviation('uai1', 'úa', match_suffix=True)
-# keyboard.add_abbreviation('uai3', 'ủa', match_suffix=True)
-# keyboard.add_abbreviation('uai4', 'ũa', match_suffix=True)
-# keyboard.add_abbreviation('uai5', 'ụa', match_suffix=True)
-
-# uay -> ua
-# keyboard.add_abbreviation('uay', 'ua', match_suffix=True)
-# VNI
-# keyboard.add_abbreviation('uayf', 'ùa', match_suffix=True)
-# keyboard.add_abbreviation('uays', 'úa', match_suffix=True)
-# keyboard.add_abbreviation('uayr', 'ủa', match_suffix=True)
-# keyboard.add_abbreviation('uayx', 'ũa', match_suffix=True)
-# keyboard.add_abbreviation('uayj', 'ụa', match_suffix=True)
-# Telex
-# keyboard.add_abbreviation('uay2', 'ùa', match_suffix=True)
-# keyboard.add_abbreviation('uay1', 'úa', match_suffix=True)
-# keyboard.add_abbreviation('uay3', 'ủa', match_suffix=True)
-# keyboard.add_abbreviation('uay4', 'ũa', match_suffix=True)
-# keyboard.add_abbreviation('uay5', 'ụa', match_suffix=True)
 
 current_word = ''
 
@@ -438,15 +317,81 @@ def on_press_key(event):
             keyboard.write('ê')
             current_word = ''
 
-        elif str(event.name) == 'q' or str(event.name) == 'c':
+        elif str(event.name) == 'q' and len(current_word) == 0:
             keyboard.send('backspace')
             keyboard.write('k')
-        elif str(event.name) == 'd' or str(event.name) == 'r':
+        elif (str(event.name) == 'd' or str(event.name) == 'r') and len(current_word) == 0:
             keyboard.send('backspace')
             keyboard.write('z')
-        elif str(event.name) == 'x':
+        elif str(event.name) == 'x' and len(current_word) == 0:
             keyboard.send('backspace')
             keyboard.write('s')
+        elif str(event.name) == 'c':
+            current_word = str(event.name)
+
+            keyboard.send('backspace')
+            keyboard.write('k')
+        elif str(event.name) == 'h' and current_word == 'c':
+            keyboard.send('backspace')
+            keyboard.send('backspace')
+            keyboard.write('c')
+            current_word = ''
+
+        # tr
+        elif str(event.name) == 't':
+            current_word = str(event.name)
+        elif str(event.name) == 'r' and current_word == 't':
+            keyboard.send('backspace')
+            keyboard.send('backspace')
+            keyboard.write('c')
+        ## th
+        elif str(event.name) == 'h' and current_word == 't':
+            keyboard.send('backspace')
+            keyboard.send('backspace')
+            keyboard.write('q')
+        # gi
+        elif str(event.name) == 'g':
+            current_word = str(event.name)
+        elif str(event.name) == 'i' and current_word == 'g':
+            keyboard.send('backspace')
+            keyboard.send('backspace')
+            keyboard.write('z')
+        # nh
+        elif str(event.name) == 'n':
+            current_word = str(event.name)
+        elif str(event.name) == 'h' and current_word == 'n':
+            keyboard.send('backspace')
+            keyboard.send('backspace')
+            keyboard.write('ń')
+        # ph
+        elif str(event.name) == 'p':
+            current_word = str(event.name)
+        elif str(event.name) == 'h' and current_word == 'p':
+            keyboard.send('backspace')
+            keyboard.send('backspace')
+            keyboard.write('f')
+        # kh
+        elif str(event.name) == 'k':
+            current_word = str(event.name)
+        elif str(event.name) == 'h' and current_word == 'k':
+            keyboard.send('backspace')
+            keyboard.send('backspace')
+            keyboard.write('x')
+        # ng
+        elif str(event.name) == 'n':
+            current_word = str(event.name)
+        elif str(event.name) == 'g' and current_word == 'n':
+            current_word += str(event.name) # save for checking ngh
+
+            keyboard.send('backspace')
+            keyboard.send('backspace')
+            keyboard.write('w')
+        # ngh
+        elif str(event.name) == 'h' and current_word == 'ng':
+            keyboard.send('backspace') # did check and correct on 'ng'
+            current_word = ''
+        elif str(event.name) != 'h' and current_word == 'ng':
+            current_word = ''
 
         else:
             current_word = ''
