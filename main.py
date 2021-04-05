@@ -41,10 +41,24 @@ def on_closing():
 
 window.protocol("WM_DELETE_WINDOW", on_closing)
 
+current_word = ''
+
+strInput = StringVar()
+
+strOutput = StringVar()
+
+tkinter.Label(window, text = "Đây là phần mềm chuyển đổi văn tự").pack()
+
+labelInput = Label(window, text="Bạn đang nhập: ").pack(expand=True)
+
+labelOutputUser = Label(window, textvariable=strInput).pack(expand=True)
+
+labelOutput = Label(window, text="Chuyển tự sang: ").pack(expand=True)
+
+labelOutputUser = Label(window, textvariable=strOutput).pack(expand=True)
+
 button = Button(window, text="Thoát", command=lambda : on_closing())
 button.pack(expand=True)
-
-current_word = ''
 
 def on_press_key(event):
     global current_word
