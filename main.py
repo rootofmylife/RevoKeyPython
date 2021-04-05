@@ -438,7 +438,7 @@ def on_press_key(event):
             keyboard.write('ê')
             current_word = ''
 
-        elif str(event.name) == 'q' str(event.name) == 'c':
+        elif str(event.name) == 'q' or str(event.name) == 'c':
             keyboard.send('backspace')
             keyboard.write('k')
         elif str(event.name) == 'd' or str(event.name) == 'r':
@@ -447,7 +447,7 @@ def on_press_key(event):
         elif str(event.name) == 'x':
             keyboard.send('backspace')
             keyboard.write('s')
-            
+
         else:
             current_word = ''
 
