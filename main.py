@@ -207,9 +207,11 @@ def on_press_key(event):
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
+            keyboard.send('backspace')
             keyboard.write('á')
             current_word = ''
         elif (str(event.name) == 'f' or str(event.name) == '2') and current_word == 'uang':
+            keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
@@ -219,9 +221,11 @@ def on_press_key(event):
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
+            keyboard.send('backspace')
             keyboard.write('ả')
             current_word = ''
         elif (str(event.name) == 'o' or str(event.name) == '4') and current_word == 'uang':
+            keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
@@ -231,9 +235,11 @@ def on_press_key(event):
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
+            keyboard.send('backspace')
             keyboard.write('ạ')
             current_word = ''
         elif str(event.name) == '=' and current_word == 'uang':
+            keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
