@@ -39,11 +39,11 @@ def on_closing():
 
 window.protocol("WM_DELETE_WINDOW", on_closing)
 
-keyboard.remap_key('q', 'k')
-keyboard.remap_key('d', 'z')
-keyboard.remap_key('r', 'z')
-keyboard.remap_key('x', 's')
-keyboard.remap_key('c', 'k')
+# keyboard.remap_key('q', 'k')
+# keyboard.remap_key('d', 'z')
+# keyboard.remap_key('r', 'z')
+# keyboard.remap_key('x', 's')
+# keyboard.remap_key('c', 'k')
 
 keyboard.add_abbreviation('tz', 'c') # tr -> c
 keyboard.add_abbreviation('gi', 'z')
@@ -438,6 +438,16 @@ def on_press_key(event):
             keyboard.write('ê')
             current_word = ''
 
+        elif str(event.name) == 'q' str(event.name) == 'c':
+            keyboard.send('backspace')
+            keyboard.write('k')
+        elif str(event.name) == 'd' or str(event.name) == 'r':
+            keyboard.send('backspace')
+            keyboard.write('z')
+        elif str(event.name) == 'x':
+            keyboard.send('backspace')
+            keyboard.write('s')
+            
         else:
             current_word = ''
 
