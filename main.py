@@ -29,6 +29,11 @@ window.geometry(f'{width}x{height}+{x}+{y}')
 window.title("Phần mềm chuyển đổi văn tự")
 window.wm_iconbitmap("icon.ico")
 
+def on_closing():
+    if messagebox.askokcancel("Đóng chương trình", "Bạn muốn thoát chương trình?"):
+        window.destroy()
+        exit()
+
 window.protocol("WM_DELETE_WINDOW", on_closing)
 
 keyboard.remap_key('q', 'k')
