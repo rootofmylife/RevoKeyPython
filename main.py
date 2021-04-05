@@ -165,4 +165,5 @@ while True:
         window.mainloop()
         showWindow = False
     time.sleep(0.01)
+    print('Terminate pre-processing...')
     pass
