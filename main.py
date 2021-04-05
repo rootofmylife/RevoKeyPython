@@ -38,11 +38,6 @@ mapping_vowel = {
     'uye6': 'uiê', 'uiê2': 'uiề', 'uiê1': 'uiế', 'uiê3': 'uiể', 'uiê4': 'uiễ', 'uiê5': 'uiệ' # Telex: uyê - > uiê
 }
 
-def vowel_ia(event):
-    if event.word == 'ìa':
-        keyboard.send('backspace')
-        keyboard.write('ê')
-
 keyboard.remap_key('q', 'k')
 keyboard.remap_key('d', 'z')
 keyboard.remap_key('r', 'z')
@@ -59,12 +54,50 @@ keyboard.add_abbreviation('kkh', 'c') # ch -> c
 keyboard.add_abbreviation('ng', 'w')
 keyboard.add_abbreviation('ngh', 'w')
 
+# ia -> iê
 keyboard.add_abbreviation('ia', 'iê', match_suffix=True)
-keyboard.add_word_listener('ìa', vowel_ia, match_suffix=True)
-# keyboard.add_abbreviation('ía', 'iế', match_suffix=True)
-# keyboard.add_abbreviation('ỉa', 'iể', match_suffix=True)
-# keyboard.add_abbreviation('ĩa', 'iễ', match_suffix=True)
-# keyboard.add_abbreviation('ịa', 'iệ', match_suffix=True)
+# VNI
+keyboard.add_abbreviation('iaf', 'iề', match_suffix=True)
+keyboard.add_abbreviation('ias', 'iế', match_suffix=True)
+keyboard.add_abbreviation('iar', 'iể', match_suffix=True)
+keyboard.add_abbreviation('iax', 'iễ', match_suffix=True)
+keyboard.add_abbreviation('iaj', 'iệ', match_suffix=True)
+# Telex
+keyboard.add_abbreviation('ia2', 'iề', match_suffix=True)
+keyboard.add_abbreviation('ia1', 'iế', match_suffix=True)
+keyboard.add_abbreviation('ia3', 'iể', match_suffix=True)
+keyboard.add_abbreviation('ia4', 'iễ', match_suffix=True)
+keyboard.add_abbreviation('ia5', 'iệ', match_suffix=True)
+
+# ua -> uô
+keyboard.add_abbreviation('ua', 'uô', match_suffix=True)
+# VNI
+keyboard.add_abbreviation('uaf', 'uồ', match_suffix=True)
+keyboard.add_abbreviation('uas', 'uố', match_suffix=True)
+keyboard.add_abbreviation('uar', 'uổ', match_suffix=True)
+keyboard.add_abbreviation('uax', 'uỗ', match_suffix=True)
+keyboard.add_abbreviation('uaj', 'uộ', match_suffix=True)
+# VNI
+keyboard.add_abbreviation('ua2', 'uồ', match_suffix=True)
+keyboard.add_abbreviation('ua1', 'uố', match_suffix=True)
+keyboard.add_abbreviation('ua3', 'uổ', match_suffix=True)
+keyboard.add_abbreviation('ua4', 'uỗ', match_suffix=True)
+keyboard.add_abbreviation('ua5', 'uộ', match_suffix=True)
+
+# uye -> uie
+keyboard.add_abbreviation('uye', 'uiê', match_suffix=True)
+# VNI
+keyboard.add_abbreviation('uyef', 'uiề', match_suffix=True)
+keyboard.add_abbreviation('uyes', 'uiế', match_suffix=True)
+keyboard.add_abbreviation('uyer', 'uiể', match_suffix=True)
+keyboard.add_abbreviation('uyex', 'uiễ', match_suffix=True)
+keyboard.add_abbreviation('uyej', 'uiệ', match_suffix=True)
+# Telex
+keyboard.add_abbreviation('uye2', 'uiề', match_suffix=True)
+keyboard.add_abbreviation('uye1', 'uiế', match_suffix=True)
+keyboard.add_abbreviation('uye3', 'uiể', match_suffix=True)
+keyboard.add_abbreviation('uye4', 'uiễ', match_suffix=True)
+keyboard.add_abbreviation('uye5', 'uiệ', match_suffix=True)
 
 while True:
     pass
