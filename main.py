@@ -184,7 +184,7 @@ def on_press_key(event):
         # check 'g', following 'uan'
         elif str(event.name) == 'g' and current_word == 'uan':
             current_word += str(event.name)
-        ### check 'y', following 'u'
+        ### check 'y', following 'u' -> uye
         elif str(event.name) == 'y' and current_word == 'u':
             current_word += str(event.name)
         elif str(event.name) == 'e' and current_word == 'uy':
@@ -192,9 +192,11 @@ def on_press_key(event):
         elif (str(event.name) == 's' or str(event.name) == '1') and current_word == 'uye':
             keyboard.send('backspace')
             keyboard.send('backspace')
+            keyboard.send('backspace')
             keyboard.write('iế')
             current_word = ''
         elif (str(event.name) == 'f' or str(event.name) == '2') and current_word == 'uye':
+            keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('iề')
@@ -202,9 +204,11 @@ def on_press_key(event):
         elif (str(event.name) == 'w' or str(event.name) == '3') and current_word == 'uye':
             keyboard.send('backspace')
             keyboard.send('backspace')
+            keyboard.send('backspace')
             keyboard.write('iể')
             current_word = ''
         elif (str(event.name) == 'o' or str(event.name) == '4') and current_word == 'uye':
+            keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('iễ')
@@ -212,9 +216,11 @@ def on_press_key(event):
         elif (str(event.name) == 'j' or str(event.name) == '5') and current_word == 'uye':
             keyboard.send('backspace')
             keyboard.send('backspace')
+            keyboard.send('backspace')
             keyboard.write('iệ')
             current_word = ''
         elif str(event.name) == '=' and current_word == 'uye':
+            keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('iê')
@@ -256,8 +262,6 @@ def on_press_key(event):
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('ê')
-            current_word = ''
-        else:
             current_word = ''
 
 keyboard.on_press(on_press_key)
