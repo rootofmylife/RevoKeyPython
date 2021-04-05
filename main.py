@@ -26,7 +26,10 @@ x, y = getCoordinate(window, width, height)
 window.geometry(f'{width}x{height}+{x}+{y}')
 
 # to rename the title of the window
-window.title("Từ điển tiếng Việt")
+window.title("Phần mềm chuyển đổi văn tự")
+window.wm_iconbitmap("icon.ico")
+
+window.protocol("WM_DELETE_WINDOW", on_closing)
 
 keyboard.remap_key('q', 'k')
 keyboard.remap_key('d', 'z')
