@@ -38,6 +38,11 @@ mapping_vowel = {
     'uye6': 'uiê', 'uiê2': 'uiề', 'uiê1': 'uiế', 'uiê3': 'uiể', 'uiê4': 'uiễ', 'uiê5': 'uiệ' # Telex: uyê - > uiê
 }
 
+def vowel_ia(event):
+    if event.word == 'ìa':
+        keyboard.send('backspace')
+        keyboard.write('ê')
+
 keyboard.remap_key('q', 'k')
 keyboard.remap_key('d', 'z')
 keyboard.remap_key('r', 'z')
@@ -55,11 +60,11 @@ keyboard.add_abbreviation('ng', 'w')
 keyboard.add_abbreviation('ngh', 'w')
 
 keyboard.add_abbreviation('ia', 'iê', match_suffix=True)
-keyboard.add_abbreviation('ìa', 'iề', match_suffix=True)
-keyboard.add_abbreviation('ía', 'iế', match_suffix=True)
-keyboard.add_abbreviation('ỉa', 'iể', match_suffix=True)
-keyboard.add_abbreviation('ĩa', 'iễ', match_suffix=True)
-keyboard.add_abbreviation('ịa', 'iệ', match_suffix=True)
+keyboard.add_word_listener('ìa', vowel_ia, match_suffix=True)
+# keyboard.add_abbreviation('ía', 'iế', match_suffix=True)
+# keyboard.add_abbreviation('ỉa', 'iể', match_suffix=True)
+# keyboard.add_abbreviation('ĩa', 'iễ', match_suffix=True)
+# keyboard.add_abbreviation('ịa', 'iệ', match_suffix=True)
 
 while True:
     pass
