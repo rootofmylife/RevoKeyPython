@@ -56,19 +56,19 @@ keyboard.add_abbreviation('ng', 'w')
 keyboard.add_abbreviation('ngh', 'w')
 
 # ia -> iê
-keyboard.add_abbreviation('ia', 'iê', match_suffix=True)
+# keyboard.add_abbreviation('ia', 'iê', match_suffix=True)
 # VNI
-keyboard.add_abbreviation('iaf', 'iề', match_suffix=True)
-keyboard.add_abbreviation('ias', 'iế', match_suffix=True)
-keyboard.add_abbreviation('iar', 'iể', match_suffix=True)
-keyboard.add_abbreviation('iax', 'iễ', match_suffix=True)
-keyboard.add_abbreviation('iaj', 'iệ', match_suffix=True)
+# keyboard.add_abbreviation('iaf', 'iề', match_suffix=True)
+# keyboard.add_abbreviation('ias', 'iế', match_suffix=True)
+# keyboard.add_abbreviation('iar', 'iể', match_suffix=True)
+# keyboard.add_abbreviation('iax', 'iễ', match_suffix=True)
+# keyboard.add_abbreviation('iaj', 'iệ', match_suffix=True)
 # Telex
-keyboard.add_abbreviation('ia2', 'iề', match_suffix=True)
-keyboard.add_abbreviation('ia1', 'iế', match_suffix=True)
-keyboard.add_abbreviation('ia3', 'iể', match_suffix=True)
-keyboard.add_abbreviation('ia4', 'iễ', match_suffix=True)
-keyboard.add_abbreviation('ia5', 'iệ', match_suffix=True)
+# keyboard.add_abbreviation('ia2', 'iề', match_suffix=True)
+# keyboard.add_abbreviation('ia1', 'iế', match_suffix=True)
+# keyboard.add_abbreviation('ia3', 'iể', match_suffix=True)
+# keyboard.add_abbreviation('ia4', 'iễ', match_suffix=True)
+# keyboard.add_abbreviation('ia5', 'iệ', match_suffix=True)
 
 # ua -> uô
 keyboard.add_abbreviation('ua', 'uô', match_suffix=True)
