@@ -185,9 +185,9 @@ def on_press_key(event):
         elif str(event.name) == 'g' and current_word == 'uan':
             current_word += str(event.name)
         ### check 'y', following 'u'
-        elif str(event.name) == 'y' and current_word == 'u'
+        elif str(event.name) == 'y' and current_word == 'u':
             current_word += str(event.name)
-        elif str(event.name) == 'e' and current_word == 'uy'
+        elif str(event.name) == 'e' and current_word == 'uy':
             current_word += str(event.name)
         elif (str(event.name) == 's' or str(event.name) == '1') and current_word == 'uye':
             keyboard.send('backspace')
