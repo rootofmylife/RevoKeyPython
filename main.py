@@ -63,6 +63,11 @@ button.pack(expand=True)
 def on_press_key(event):
     global current_word
 
+    if str(event.name).isdigit() or str(event.name).isalpha():
+        strInput.set(strInput.get() + str(event.name))
+    else:
+        strInput.set('')
+
     if len(str(event.name)) == 1:
         # check start with u
         if str(event.name) == 'u':
