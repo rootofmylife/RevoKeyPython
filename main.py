@@ -63,7 +63,7 @@ button.pack(expand=True)
 def on_press_key(event):
     global current_word
 
-    if str(event.name).isdigit() or str(event.name).isalpha():
+    if (str(event.name).isdigit() or str(event.name).isalpha()) and len(str(event.name)):
         strInput.set(strInput.get() + str(event.name))
     else:
         strInput.set('')
