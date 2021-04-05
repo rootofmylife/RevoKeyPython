@@ -174,7 +174,7 @@ def on_press_key(event):
         if str(event.name) == 'i':
             current_word += str(event.name)
         # check 'a', following 'i'
-        elif str(event.name) == 'a' and current_word = 'i':
+        elif str(event.name) == 'a' and current_word == 'i':
             current_word += str(event.name)
         # check 's -> iế
         elif (str(event.name) == 's' or str(event.name) == '1') and current_word == 'ia':
