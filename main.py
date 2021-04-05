@@ -3,40 +3,28 @@ import keyboard
 
 from tkinter import *
 
-mapping_consonant_type_one = {
-    'q': 'k',
-    'd': 'z',
-    'r': 'z',
-    'x': 's',
-}
+showWindow = True
 
-mapping_consonant_type_two = {
-    'tr': 'c',
-    'gi': 'z',
-    'nh': 'ń',
-    'ph': 'f',
-    'kh': 'x',
-    'th': 'q',
-}
+def getHalfWindowSize(window):
+    return int(window.winfo_screenwidth() / 2) + 250, int(window.winfo_screenheight() / 1)
 
-mapping_consonant_type_three = {
-    'c': 'k',
-    'ch': 'c',
-    'ng': 'w',
-    'ngh': 'w',
-}
+def getCoordinate(window, width, height):
+    return int((window.winfo_screenwidth() / 2) - (width / 2)), int((window.winfo_screenheight() / 2) - (height / 2))
 
-mapping_vowel = {
-    'ia': 'iê', 'ìa': 'iề', 'ía': 'iế', 'ỉa': 'iể', 'ĩa': 'iễ', 'ịa': 'iệ',
-    'uan': 'ua', 'uản': 'ủa', 'uàn': 'ùa', 'uán': 'úa', 'uãn': 'ũa', 'uạn': 'ụa',
-    'uang': 'ua', 'uàng': 'ùa', 'uáng': 'úa', 'uảng': 'ủa', 'uãng': 'ũa', 'uạng': 'ụa',
-    'uai': 'ua', 'uài': 'ùa', 'uái': 'úa', 'uại': 'ụa', 'uải': 'ủa', 'uãi': 'ũa',
-    'uay': 'ua', 'uày': 'ùa', 'uáy': 'úa', 'uạy': 'ụa', 'uảy': 'ủa', 'uãy': 'ũa',
-    'ua': 'uô', 'uôs': 'uố', 'uôf': 'uồ', 'uôr': 'uổ', 'uôx': 'uỗ', 'uôj': 'uộ', # end of morpho
-    'uô1': 'uố', 'uô2': 'uồ', 'uô3': 'uổ', 'uô4': 'uỗ', 'uô5': 'uộ',
-    'uyee': 'uiê', 'uiêf': 'uiề', 'uiês': 'uiế', 'uiêr': 'uiể', 'uiêx': 'uiễ', 'uiêj': 'uiệ', # Telex: uyê - > uiê
-    'uye6': 'uiê', 'uiê2': 'uiề', 'uiê1': 'uiế', 'uiê3': 'uiể', 'uiê4': 'uiễ', 'uiê5': 'uiệ' # Telex: uyê - > uiê
-}
+print('Starting to pre-processing...')
+
+# create a tkinter window
+window = tkinter.Tk()
+
+# Init frame
+width, height = getHalfWindowSize(window)
+x, y = getCoordinate(window, width, height)
+
+# Open window having dimension 100x100
+window.geometry(f'{width}x{height}+{x}+{y}')
+
+# to rename the title of the window
+window.title("Từ điển tiếng Việt")
 
 keyboard.remap_key('q', 'k')
 keyboard.remap_key('d', 'z')
@@ -158,5 +146,10 @@ keyboard.add_abbreviation('uay1', 'úa', match_suffix=True)
 keyboard.add_abbreviation('uay3', 'ủa', match_suffix=True)
 keyboard.add_abbreviation('uay4', 'ũa', match_suffix=True)
 keyboard.add_abbreviation('uay5', 'ụa', match_suffix=True)
+
 while True:
+    if showWindow:
+        window.mainloop()
+        showWindow = False
+    time.sleep(0.01)
     pass
