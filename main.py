@@ -5,6 +5,9 @@ import time
 import tkinter
 from tkinter import *
 
+from tkinter import messagebox
+from sys import exit
+
 showWindow = True
 
 def getHalfWindowSize(window):
