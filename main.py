@@ -47,8 +47,6 @@ strInput = StringVar()
 
 strOutput = StringVar()
 
-strOutput.set('trời đất ơi')
-
 tkinter.Label(window, text = "Đây là phần mềm chuyển đổi văn tự").pack()
 
 labelInput = Label(window, text="Bạn đang nhập: ").pack(expand=True)
@@ -81,31 +79,37 @@ def on_press_key(event):
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('ố')
+            strOutput.set('uố')
             current_word = ''
         elif (str(event.name) == 'f' or str(event.name) == '2') and current_word == 'ua':
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('ồ')
+            strOutput.set('uồ')
             current_word = ''
         elif (str(event.name) == 'w' or str(event.name) == '3') and current_word == 'ua':
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('ổ')
+            strOutput.set('uổ')
             current_word = ''
         elif (str(event.name) == 'o' or str(event.name) == '4') and current_word == 'ua':
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('ỗ')
+            strOutput.set('uỗ')
             current_word = ''
         elif (str(event.name) == 'j' or str(event.name) == '5') and current_word == 'ua':
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('ộ')
+            strOutput.set('uộ')
             current_word = ''
         elif str(event.name) == '=' and current_word == 'ua':
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('ô')
+            strOutput.set('uô')
             current_word = ''
         ### check 'i', following 'ua'
         elif str(event.name) == 'i' and current_word == 'ua':
@@ -115,36 +119,42 @@ def on_press_key(event):
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('á')
+            strOutput.set('uá')
             current_word = ''
         elif (str(event.name) == 'f' or str(event.name) == '2') and current_word == 'uai':
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('à')
+            strOutput.set('uà')
             current_word = ''
         elif (str(event.name) == 'w' or str(event.name) == '3') and current_word == 'uai':
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('ả')
+            strOutput.set('uả')
             current_word = ''
         elif (str(event.name) == 'o' or str(event.name) == '4') and current_word == 'uai':
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('ã')
+            strOutput.set('uã')
             current_word = ''
         elif (str(event.name) == 'j' or str(event.name) == '5') and current_word == 'uai':
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('ạ')
+            strOutput.set('uạ')
             current_word = ''
         elif str(event.name) == '=' and current_word == 'uai':
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('a')
+            strOutput.set('ua')
             current_word = ''
         ### check 'y', following 'ua'
         elif str(event.name) == 'y' and current_word == 'ua':
@@ -154,36 +164,42 @@ def on_press_key(event):
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('á')
+            strOutput.set('uá')
             current_word = ''
         elif (str(event.name) == 'f' or str(event.name) == '2') and current_word == 'uay':
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('à')
+            strOutput.set('uà')
             current_word = ''
         elif (str(event.name) == 'w' or str(event.name) == '3') and current_word == 'uay':
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('ả')
+            strOutput.set('uả')
             current_word = ''
         elif (str(event.name) == 'o' or str(event.name) == '4') and current_word == 'uay':
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('ã')
+            strOutput.set('uã')
             current_word = ''
         elif (str(event.name) == 'j' or str(event.name) == '5') and current_word == 'uay':
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('ạ')
+            strOutput.set('uạ')
             current_word = ''
         elif str(event.name) == '=' and current_word == 'uay':
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('a')
+            strOutput.set('ua')
             current_word = ''
         ### check 'n', following 'ua'
         elif str(event.name) == 'n' and current_word == 'ua':
@@ -193,36 +209,42 @@ def on_press_key(event):
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('á')
+            strOutput.set('uá')
             current_word = ''
         elif (str(event.name) == 'f' or str(event.name) == '2') and current_word == 'uan':
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('à')
+            strOutput.set('uà')
             current_word = ''
         elif (str(event.name) == 'w' or str(event.name) == '3') and current_word == 'uan':
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('ả')
+            strOutput.set('uả')
             current_word = ''
         elif (str(event.name) == 'o' or str(event.name) == '4') and current_word == 'uan':
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('ã')
+            strOutput.set('uã')
             current_word = ''
         elif (str(event.name) == 'j' or str(event.name) == '5') and current_word == 'uan':
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('ạ')
+            strOutput.set('uạ')
             current_word = ''
         elif str(event.name) == '=' and current_word == 'uan':
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('a')
+            strOutput.set('ua')
             current_word = ''
         ### check 'g', following 'uan'
         elif str(event.name) == 'g' and current_word == 'uan':
@@ -233,6 +255,7 @@ def on_press_key(event):
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('á')
+            strOutput.set('uá')
             current_word = ''
         elif (str(event.name) == 'f' or str(event.name) == '2') and current_word == 'uang':
             keyboard.send('backspace')
@@ -240,6 +263,7 @@ def on_press_key(event):
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('à')
+            strOutput.set('uà')
             current_word = ''
         elif (str(event.name) == 'w' or str(event.name) == '3') and current_word == 'uang':
             keyboard.send('backspace')
@@ -247,6 +271,7 @@ def on_press_key(event):
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('ả')
+            strOutput.set('uả')
             current_word = ''
         elif (str(event.name) == 'o' or str(event.name) == '4') and current_word == 'uang':
             keyboard.send('backspace')
@@ -254,6 +279,7 @@ def on_press_key(event):
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('ã')
+            strOutput.set('uã')
             current_word = ''
         elif (str(event.name) == 'j' or str(event.name) == '5') and current_word == 'uang':
             keyboard.send('backspace')
@@ -261,6 +287,7 @@ def on_press_key(event):
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('ạ')
+            strOutput.set('uạ')
             current_word = ''
         elif str(event.name) == '=' and current_word == 'uang':
             keyboard.send('backspace')
@@ -268,6 +295,7 @@ def on_press_key(event):
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('a')
+            strOutput.set('ua')
             current_word = ''
         ### check 'y', following 'u' -> uye
         elif str(event.name) == 'y' and current_word == 'u':
@@ -279,36 +307,42 @@ def on_press_key(event):
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('iế')
+            strOutput.set('uiế')
             current_word = ''
         elif (str(event.name) == 'f' or str(event.name) == '2') and current_word == 'uye':
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('iề')
+            strOutput.set('uiề')
             current_word = ''
         elif (str(event.name) == 'w' or str(event.name) == '3') and current_word == 'uye':
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('iể')
+            strOutput.set('uiể')
             current_word = ''
         elif (str(event.name) == 'o' or str(event.name) == '4') and current_word == 'uye':
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('iễ')
+            strOutput.set('uiễ')
             current_word = ''
         elif (str(event.name) == 'j' or str(event.name) == '5') and current_word == 'uye':
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('iệ')
+            strOutput.set('uiệ')
             current_word = ''
         elif str(event.name) == '=' and current_word == 'uye':
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('iê')
+            strOutput.set('uiê')
             current_word = ''
 
         # check start with 'i'
@@ -322,51 +356,62 @@ def on_press_key(event):
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('ế')
+            strOutput.set('ế')
             current_word = ''
         elif (str(event.name) == 'f' or str(event.name) == '2') and current_word == 'ia':
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('ề')
+            strOutput.set('ề')
             current_word = ''
         elif (str(event.name) == 'w' or str(event.name) == '3') and current_word == 'ia':
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('ể')
+            strOutput.set('ể')
             current_word = ''
         elif (str(event.name) == 'o' or str(event.name) == '4') and current_word == 'ia':
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('ễ')
+            strOutput.set('ễ')
             current_word = ''
         elif (str(event.name) == 'j' or str(event.name) == '5') and current_word == 'ia':
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('ệ')
+            strOutput.set('ệ')
             current_word = ''
         elif str(event.name) == '=' and current_word == 'ia':
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('ê')
+            strOutput.set('ê')
             current_word = ''
 
         elif str(event.name) == 'q' and len(current_word) == 0:
             keyboard.send('backspace')
             keyboard.write('k')
+            strOutput.set('k')
         elif (str(event.name) == 'd' or str(event.name) == 'r') and len(current_word) == 0:
             keyboard.send('backspace')
             keyboard.write('z')
+            strOutput.set('z')
         elif str(event.name) == 'x' and len(current_word) == 0:
             keyboard.send('backspace')
             keyboard.write('s')
+            strOutput.set('s')
         elif str(event.name) == 'c':
             current_word = str(event.name)
 
             keyboard.send('backspace')
             keyboard.write('k')
+            strOutput.set('k')
         elif str(event.name) == 'h' and current_word == 'c':
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('c')
+            strOutput.set('c')
             current_word = ''
 
         # tr
@@ -376,11 +421,13 @@ def on_press_key(event):
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('c')
+            strOutput.set('c')
         ## th
         elif str(event.name) == 'h' and current_word == 't':
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('q')
+            strOutput.set('q')
         # gi
         elif str(event.name) == 'g':
             current_word = str(event.name)
@@ -388,6 +435,7 @@ def on_press_key(event):
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('z')
+            strOutput.set('z')
         # nh
         elif str(event.name) == 'n':
             current_word = str(event.name)
@@ -395,6 +443,7 @@ def on_press_key(event):
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('ń')
+            strOutput.set('ń')
         # ph
         elif str(event.name) == 'p':
             current_word = str(event.name)
@@ -402,6 +451,7 @@ def on_press_key(event):
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('f')
+            strOutput.set('f')
         # kh
         elif str(event.name) == 'k':
             current_word = str(event.name)
@@ -409,6 +459,7 @@ def on_press_key(event):
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('x')
+            strOutput.set('x')
         # ng
         elif str(event.name) == 'n':
             current_word = str(event.name)
@@ -418,6 +469,7 @@ def on_press_key(event):
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.write('w')
+            strOutput.set('w')
         # ngh
         elif str(event.name) == 'h' and current_word == 'ng':
             keyboard.send('backspace') # did check and correct on 'ng'
