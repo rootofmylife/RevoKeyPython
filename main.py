@@ -160,6 +160,56 @@ keyboard.add_abbreviation('uay3', 'ủa', match_suffix=True)
 keyboard.add_abbreviation('uay4', 'ũa', match_suffix=True)
 keyboard.add_abbreviation('uay5', 'ụa', match_suffix=True)
 
+current_word = ''
+
+def on_press_key(event):
+    global current_word
+
+    if len(str(event.name)) == 1:
+        # check start with u
+        if str(event.name) == 'u':
+            current_word += str(event.name)
+
+        # check start with 'i'
+        if str(event.name) == 'i':
+            current_word += str(event.name)
+        # check 'a', following 'i'
+        elif str(event.name) == 'a' and current_word = 'i':
+            current_word += str(event.name)
+        # check 's -> iế
+        elif (str(event.name) == 's' or str(event.name) == '1') and current_word == 'ia':
+            keyboard.send('backspace')
+            keyboard.send('backspace')
+            keyboard.write('ế')
+            current_word = ''
+        elif (str(event.name) == 'f' or str(event.name) == '2') and current_word == 'ia':
+            keyboard.send('backspace')
+            keyboard.send('backspace')
+            keyboard.write('ề')
+            current_word = ''
+        elif (str(event.name) == 'r' or str(event.name) == '3') and current_word == 'ia':
+            keyboard.send('backspace')
+            keyboard.send('backspace')
+            keyboard.write('ể')
+            current_word = ''
+        elif (str(event.name) == 'x' or str(event.name) == '4') and current_word == 'ia':
+            keyboard.send('backspace')
+            keyboard.send('backspace')
+            keyboard.write('ễ')
+            current_word = ''
+        elif (str(event.name) == 'j' or str(event.name) == '5') and current_word == 'ia':
+            keyboard.send('backspace')
+            keyboard.send('backspace')
+            keyboard.write('ệ')
+            current_word = ''
+        elif str(event.name) == '=' and current_word == 'ia':
+            keyboard.send('backspace')
+            keyboard.send('backspace')
+            keyboard.write('ê')
+            current_word = ''
+
+keyboard.on_press(on_press_key)
+
 while True:
     if showWindow:
         window.mainloop()
