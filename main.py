@@ -1,5 +1,6 @@
 import re
 import keyboard
+import time
 
 from tkinter import *
 
