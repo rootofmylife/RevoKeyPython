@@ -11,7 +11,7 @@ from sys import exit
 showWindow = True
 
 def getHalfWindowSize(window):
-    return int(window.winfo_screenwidth() / 2), int(window.winfo_screenheight() / 2)
+    return int(window.winfo_screenwidth() / 4), int(window.winfo_screenheight() / 4)
 
 def getCoordinate(window, width, height):
     return int((window.winfo_screenwidth() / 2) - (width / 2)), int((window.winfo_screenheight() / 2) - (height / 2))
@@ -31,6 +31,8 @@ window.geometry(f'{width}x{height}+{x}+{y}')
 # to rename the title of the window
 window.title("Phần mềm chuyển đổi văn tự")
 window.wm_iconbitmap("icon.ico")
+
+window.resizable(False, False)
 
 def on_closing():
     if messagebox.askokcancel("Đóng chương trình", "Bạn muốn thoát chương trình?"):
