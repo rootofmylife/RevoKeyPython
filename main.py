@@ -41,8 +41,7 @@ def on_closing():
 
 window.protocol("WM_DELETE_WINDOW", on_closing)
 
-container = Frame(window)
-button = Button(container, text="Thoát", command=lambda : on_closing)
+button = Button(window, text="Thoát", command=lambda : on_closing())
 button.pack(expand=True)
 
 current_word = ''
