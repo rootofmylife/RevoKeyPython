@@ -615,6 +615,7 @@ def on_press_key(event):
             else:
                 keyboard.write('c')
                 strOutput.set('c')
+            current_word = ''
         ## th
         elif str(event.name) in ['h', 'H'] and current_word in ['t', 'T']:
             keyboard.send('backspace')
@@ -625,6 +626,7 @@ def on_press_key(event):
             else:
                 keyboard.write('q')
                 strOutput.set('q')
+            current_word = ''
         # gi
         elif str(event.name) in ['g', 'G']:
             current_word = str(event.name)
@@ -637,6 +639,7 @@ def on_press_key(event):
             else:
                 keyboard.write('z')
                 strOutput.set('z')
+            current_word = ''
         # nh
         elif str(event.name) in ['n', 'N']:
             current_word = str(event.name)
@@ -649,6 +652,7 @@ def on_press_key(event):
             else:
                 keyboard.write('ń')
                 strOutput.set('ń')
+            current_word = ''
         # ng
         elif str(event.name) in ['g', 'G'] and current_word in ['n', 'N']:
             current_word += str(event.name) # save for checking ngh
@@ -682,6 +686,7 @@ def on_press_key(event):
             else:
                 keyboard.write('f')
                 strOutput.set('f')
+            current_word = ''
         # kh
         elif str(event.name) in ['k', 'K']:
             current_word = str(event.name)
@@ -694,7 +699,7 @@ def on_press_key(event):
             else:
                 keyboard.write('x')
                 strOutput.set('x')
-
+            current_word = ''
         else:
             current_word = ''
 
