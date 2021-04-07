@@ -560,7 +560,7 @@ def on_press_key(event):
 
         elif str(event.name) in ['q', 'Q'] and len(current_word) == 0:
             keyboard.send('backspace')
-            if current_word.isupper():
+            if str(event.name).isupper():
                 keyboard.write('K')
                 strOutput.set('K')
             else:
@@ -568,7 +568,7 @@ def on_press_key(event):
                 strOutput.set('k')
         elif (str(event.name) in ['d', 'D'] or str(event.name) in ['r', 'R']) and len(current_word) == 0:
             keyboard.send('backspace')
-            if current_word.isupper():
+            if str(event.name).isupper():
                 keyboard.write('Z')
                 strOutput.set('Z')
             else:
@@ -576,7 +576,7 @@ def on_press_key(event):
                 strOutput.set('z')
         elif str(event.name) in ['x', 'X'] and len(current_word) == 0:
             keyboard.send('backspace')
-            if current_word.isupper():
+            if str(event.name).isupper():
                 keyboard.write('S')
                 strOutput.set('S')
             else:
@@ -586,7 +586,7 @@ def on_press_key(event):
             current_word = str(event.name)
 
             keyboard.send('backspace')
-            if current_word.isupper():
+            if str(event.name).isupper():
                 keyboard.write('K')
                 strOutput.set('K')
             else:
@@ -595,7 +595,7 @@ def on_press_key(event):
         elif str(event.name) in ['h', 'H'] and current_word in ['c', 'C']:
             keyboard.send('backspace')
             keyboard.send('backspace')
-            if current_word.isupper():
+            if str(event.name).isupper():
                 keyboard.write('C')
                 strOutput.set('C')
             else:
@@ -609,7 +609,7 @@ def on_press_key(event):
         elif str(event.name) in ['r', 'R'] and current_word in ['t', 'T']:
             keyboard.send('backspace')
             keyboard.send('backspace')
-            if current_word.isupper():
+            if str(event.name).isupper():
                 keyboard.write('C')
                 strOutput.set('C')
             else:
@@ -619,7 +619,7 @@ def on_press_key(event):
         elif str(event.name) in ['h', 'H'] and current_word in ['t', 'T']:
             keyboard.send('backspace')
             keyboard.send('backspace')
-            if current_word.isupper():
+            if str(event.name).isupper():
                 keyboard.write('Q')
                 strOutput.set('Q')
             else:
@@ -631,7 +631,7 @@ def on_press_key(event):
         elif str(event.name) in ['i', 'I'] and current_word in ['g', 'G']:
             keyboard.send('backspace')
             keyboard.send('backspace')
-            if current_word.isupper():
+            if str(event.name).isupper():
                 keyboard.write('Z')
                 strOutput.set('Z')
             else:
@@ -643,7 +643,7 @@ def on_press_key(event):
         elif str(event.name) in ['h', 'H'] and current_word in ['n', 'N']:
             keyboard.send('backspace')
             keyboard.send('backspace')
-            if current_word.isupper():
+            if str(event.name).isupper():
                 keyboard.write('Ń')
                 strOutput.set('Ń')
             else:
@@ -655,7 +655,7 @@ def on_press_key(event):
         elif str(event.name) in ['h', 'H'] and current_word in ['p', 'P']:
             keyboard.send('backspace')
             keyboard.send('backspace')
-            if current_word.isupper():
+            if str(event.name).isupper():
                 keyboard.write('F')
                 strOutput.set('F')
             else:
@@ -667,7 +667,7 @@ def on_press_key(event):
         elif str(event.name) in ['h', 'H'] and current_word in ['k', 'K']:
             keyboard.send('backspace')
             keyboard.send('backspace')
-            if current_word.isupper():
+            if str(event.name).isupper():
                 keyboard.write('X')
                 strOutput.set('X')
             else:
@@ -681,7 +681,7 @@ def on_press_key(event):
 
             keyboard.send('backspace')
             keyboard.send('backspace')
-            if current_word.isupper():
+            if str(event.name).isupper():
                 keyboard.write('W')
                 strOutput.set('W')
             else:
