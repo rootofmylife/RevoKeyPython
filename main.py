@@ -649,6 +649,27 @@ def on_press_key(event):
             else:
                 keyboard.write('ń')
                 strOutput.set('ń')
+        # ng
+        elif str(event.name) in ['g', 'G'] and current_word in ['n', 'N']:
+            current_word += str(event.name) # save for checking ngh
+
+            keyboard.send('backspace')
+            keyboard.send('backspace')
+            if str(event.name).isupper():
+                keyboard.write('W')
+                strOutput.set('W')
+            else:
+                keyboard.write('w')
+                strOutput.set('w')
+        # ngh
+        elif str(event.name) in ['h', 'H'] and current_word in ['ng', 'NG']:
+            keyboard.send('backspace') # did check and correct on 'ng'
+            current_word = ''
+        elif str(event.name) not in ['h', 'H'] and current_word in ['ng', 'NG']:
+            if str(event.name) in ['i', 'u', 'I', 'U']:
+                current_word = str(event.name)
+            else:
+                current_word = ''
         # ph
         elif str(event.name) in ['p', 'P']:
             current_word = str(event.name)
@@ -673,26 +694,6 @@ def on_press_key(event):
             else:
                 keyboard.write('x')
                 strOutput.set('x')
-        # ng
-        elif str(event.name) in ['n', 'N']:
-            current_word = str(event.name)
-        elif str(event.name) in ['g', 'G'] and current_word in ['n', 'N']:
-            current_word += str(event.name) # save for checking ngh
-
-            keyboard.send('backspace')
-            keyboard.send('backspace')
-            if str(event.name).isupper():
-                keyboard.write('W')
-                strOutput.set('W')
-            else:
-                keyboard.write('w')
-                strOutput.set('w')
-        # ngh
-        elif str(event.name) in ['h', 'H'] and current_word in ['ng', 'NG']:
-            keyboard.send('backspace') # did check and correct on 'ng'
-            current_word = ''
-        elif str(event.name) not in ['h', 'H'] and current_word in ['ng', 'NG']:
-            current_word = ''
 
         else:
             current_word = ''
