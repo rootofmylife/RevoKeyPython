@@ -30,7 +30,7 @@ window.geometry(f'{width}x{height}+{x}+{y}')
 
 # to rename the title of the window
 window.title("Phần mềm chuyển đổi văn tự")
-window.wm_iconbitmap("icon.ico")
+# window.wm_iconbitmap("icon.ico")
 
 window.resizable(False, False)
 
