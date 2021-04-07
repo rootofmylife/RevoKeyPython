@@ -71,7 +71,7 @@ def on_press_key(event):
 
     if len(str(event.name)) == 1:
         # check start with u
-        if str(event.name) in ['u', 'U']:
+        if str(event.name) in ['u', 'U'] and len(current_word) == 0:
             current_word = str(event.name)
         ### check 'a', following 'u'
         elif str(event.name) in ['a', 'A'] and current_word in ['u', 'U']:
@@ -491,7 +491,7 @@ def on_press_key(event):
             current_word = ''
 
         # check start with 'i'
-        elif str(event.name) in ['i', 'I']:
+        elif str(event.name) in ['i', 'I'] and len(current_word) == 0:
             current_word = str(event.name)
         # check 'a', following 'i'
         elif str(event.name) in ['a', 'A'] and current_word in ['i', 'I']:
@@ -582,7 +582,7 @@ def on_press_key(event):
             else:
                 keyboard.write('s')
                 strOutput.set('s')
-        elif str(event.name) in ['c', 'C']:
+        elif str(event.name) in ['c', 'C'] and len(current_word) == 0:
             current_word = str(event.name)
 
             keyboard.send('backspace')
@@ -604,7 +604,7 @@ def on_press_key(event):
             current_word = ''
 
         # tr
-        elif str(event.name) in ['t', 'T']:
+        elif str(event.name) in ['t', 'T'] and len(current_word) == 0:
             current_word = str(event.name)
         elif str(event.name) in ['r', 'R'] and current_word in ['t', 'T']:
             keyboard.send('backspace')
@@ -641,7 +641,7 @@ def on_press_key(event):
                 strOutput.set('z')
             current_word = ''
         # nh
-        elif str(event.name) in ['n', 'N']:
+        elif str(event.name) in ['n', 'N'] and len(current_word) == 0:
             current_word = str(event.name)
         elif str(event.name) in ['h', 'H'] and current_word in ['n', 'N']:
             keyboard.send('backspace')
@@ -675,7 +675,7 @@ def on_press_key(event):
             else:
                 current_word = ''
         # ph
-        elif str(event.name) in ['p', 'P']:
+        elif str(event.name) in ['p', 'P'] and len(current_word) == 0:
             current_word = str(event.name)
         elif str(event.name) in ['h', 'H'] and current_word in ['p', 'P']:
             keyboard.send('backspace')
@@ -688,7 +688,7 @@ def on_press_key(event):
                 strOutput.set('f')
             current_word = ''
         # kh
-        elif str(event.name) in ['k', 'K']:
+        elif str(event.name) in ['k', 'K'] and len(current_word) == 0:
             current_word = str(event.name)
         elif str(event.name) in ['h', 'H'] and current_word in ['k', 'K']:
             keyboard.send('backspace')
