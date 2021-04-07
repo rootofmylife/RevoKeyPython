@@ -628,7 +628,7 @@ def on_press_key(event):
                 strOutput.set('q')
             current_word = ''
         # gi
-        elif str(event.name) in ['g', 'G']:
+        elif str(event.name) in ['g', 'G'] and len(current_word) == 0:
             current_word = str(event.name)
         elif str(event.name) in ['i', 'I'] and current_word in ['g', 'G']:
             keyboard.send('backspace')
