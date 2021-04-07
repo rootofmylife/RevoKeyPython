@@ -79,9 +79,9 @@ def on_press_key(event):
         elif (str(event.name) in ['s', 'S'] or str(event.name) == '1') and current_word in ['ua', 'UA']:
             keyboard.send('backspace')
             keyboard.send('backspace')
-            if str(event.name).isupper():
-                keyboard.write('ố')
-                strOutput.set('uố')
+            if current_word.isupper():
+                keyboard.write('Ố')
+                strOutput.set('UỐ')
             else:
                 keyboard.write('ố')
                 strOutput.set('uố')
@@ -89,32 +89,52 @@ def on_press_key(event):
         elif (str(event.name) in ['f', 'F'] or str(event.name) == '2') and current_word in ['ua', 'UA']:
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('ồ')
-            strOutput.set('uồ')
+            if current_word.isupper():
+                keyboard.write('Ồ')
+                keyboard.write('UỒ')
+            else:
+                keyboard.write('ồ')
+                strOutput.set('uồ')
             current_word = ''
         elif (str(event.name) in ['w', 'W'] or str(event.name) == '3') and current_word in ['ua', 'UA']:
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('ổ')
-            strOutput.set('uổ')
+            if current_word.isupper():
+                keyboard.write('Ổ')
+                strOutput.set('UỔ')
+            else:
+                keyboard.write('ổ')
+                strOutput.set('uổ')
             current_word = ''
         elif (str(event.name) in ['o', 'O'] or str(event.name) == '4') and current_word in ['ua', 'UA']:
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('ỗ')
-            strOutput.set('uỗ')
+            if current_word.isupper():
+                keyboard.write('Ỗ')
+                strOutput.set('UỖ')
+            else:
+                keyboard.write('ỗ')
+                strOutput.set('uỗ')
             current_word = ''
         elif (str(event.name) in ['j', 'J'] or str(event.name) == '5') and current_word in ['ua', 'UA']:
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('ộ')
-            strOutput.set('uộ')
+            if current_word.isupper():
+                keyboard.write('Ộ')
+                strOutput.set('UỘ')
+            else:
+                keyboard.write('ộ')
+                strOutput.set('uộ')
             current_word = ''
         elif str(event.name) == '=' and current_word in ['ua', 'UA']:
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('ô')
-            strOutput.set('uô')
+            if current_word.isupper():
+                keyboard.write('Ô')
+                strOutput.set('UÔ')
+            else:
+                keyboard.write('ô')
+                strOutput.set('uô')
             current_word = ''
         ### check 'i', following 'ua'
         elif str(event.name) in ['i', 'I'] and current_word in ['ua', 'UA']:
@@ -123,43 +143,67 @@ def on_press_key(event):
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('á')
-            strOutput.set('uá')
+            if current_word.isupper():
+                keyboard.write('Á')
+                strOutput.set('UÁ')
+            else:
+                keyboard.write('á')
+                strOutput.set('uá')
             current_word = ''
         elif (str(event.name) in ['f', 'F'] or str(event.name) == '2') and current_word in ['uai', 'UAI']:
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('à')
-            strOutput.set('uà')
+            if current_word.isupper():
+                keyboard.write('À')
+                strOutput.set('UÀ')
+            else:
+                keyboard.write('à')
+                strOutput.set('uà')
             current_word = ''
         elif (str(event.name) in ['w', 'W'] or str(event.name) == '3') and current_word in ['uai', 'UAI']:
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('ả')
-            strOutput.set('uả')
+            if current_word.isupper():
+                keyboard.write('Ả')
+                strOutput.set('UẢ')
+            else:
+                keyboard.write('ả')
+                strOutput.set('uả')
             current_word = ''
         elif (str(event.name) in ['o', 'O'] or str(event.name) == '4') and current_word in ['uai', 'UAI']:
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('ã')
-            strOutput.set('uã')
+            if current_word.isupper():
+                keyboard.write('Ã')
+                strOutput.set('UÃ')
+            else:
+                keyboard.write('ã')
+                strOutput.set('uã')
             current_word = ''
         elif (str(event.name) in ['j', 'J'] or str(event.name) == '5') and current_word in ['uai', 'UAI']:
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('ạ')
-            strOutput.set('uạ')
+            if current_word.isupper():
+                keyboard.write('Ạ')
+                strOutput.set('U Ạ')
+            else:
+                keyboard.write('ạ')
+                strOutput.set('uạ')
             current_word = ''
         elif str(event.name) == '=' and current_word in ['uai', 'UAI']:
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('a')
-            strOutput.set('ua')
+            if current_word.isupper():
+                keyboard.write('A')
+                strOutput.set('UA')
+            else:
+                keyboard.write('a')
+                strOutput.set('ua')
             current_word = ''
         ### check 'y', following 'ua'
         elif str(event.name) in ['y', 'Y'] and current_word in ['ua', 'UA']:
@@ -168,43 +212,67 @@ def on_press_key(event):
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('á')
-            strOutput.set('uá')
+            if current_word.isupper():
+                keyboard.write('Á')
+                strOutput.set('UÁ')
+            else:
+                keyboard.write('á')
+                strOutput.set('uá')
             current_word = ''
         elif (str(event.name) in ['f', 'F'] or str(event.name) == '2') and current_word in ['uay', 'UAY']:
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('à')
-            strOutput.set('uà')
+            if current_word.isupper():
+                keyboard.write('À')
+                strOutput.set('UÀ')
+            else:
+                keyboard.write('à')
+                strOutput.set('uà')
             current_word = ''
         elif (str(event.name) in ['w', 'W'] or str(event.name) == '3') and current_word in ['uay', 'UAY']:
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('ả')
-            strOutput.set('uả')
+            if current_word.isupper():
+                keyboard.write('Ả')
+                strOutput.set('UẢ')
+            else:
+                keyboard.write('ả')
+                strOutput.set('uả')
             current_word = ''
         elif (str(event.name) in ['o', 'O'] or str(event.name) == '4') and current_word in ['uay', 'UAY']:
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('ã')
-            strOutput.set('uã')
+            if current_word.isupper():
+                keyboard.write('Ã')
+                strOutput.set('UÃ')
+            else:
+                keyboard.write('ã')
+                strOutput.set('uã')
             current_word = ''
         elif (str(event.name) in ['j', 'J'] or str(event.name) == '5') and current_word in ['uay', 'UAY']:
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('ạ')
-            strOutput.set('uạ')
+            if current_word.isupper():
+                keyboard.write('Ạ')
+                strOutput.set('UẠ')
+            else:
+                keyboard.write('ạ')
+                strOutput.set('uạ')
             current_word = ''
         elif str(event.name) == '=' and current_word in ['uay', 'UAY']:
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('a')
-            strOutput.set('ua')
+            if current_word.isupper():
+                keyboard.write('A')
+                strOutput.set('UA')
+            else:
+                keyboard.write('a')
+                strOutput.set('ua')
             current_word = ''
         ### check 'n', following 'ua'
         elif str(event.name) in ['n', 'N'] and current_word in ['ua', 'UA']:
@@ -213,43 +281,67 @@ def on_press_key(event):
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('á')
-            strOutput.set('uá')
+            if current_word.isupper():
+                keyboard.write('Á')
+                strOutput.set('UÁ')
+            else:
+                keyboard.write('á')
+                strOutput.set('uá')
             current_word = ''
         elif (str(event.name) in ['f', 'F'] or str(event.name) == '2') and current_word in ['uan', 'UAN']:
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('à')
-            strOutput.set('uà')
+            if current_word.isupper():
+                keyboard.write('À')
+                strOutput.set('UÀ')
+            else:
+                keyboard.write('à')
+                strOutput.set('uà')
             current_word = ''
         elif (str(event.name) in ['w', 'W'] or str(event.name) == '3') and current_word in ['uan', 'UAN']:
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('ả')
-            strOutput.set('uả')
+            if current_word.isupper():
+                keyboard.write('Ả')
+                strOutput.set('UẢ')
+            else:
+                keyboard.write('ả')
+                strOutput.set('uả')
             current_word = ''
         elif (str(event.name) in ['o', 'O'] or str(event.name) == '4') and current_word in ['uan', 'UAN']:
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('ã')
-            strOutput.set('uã')
+            if current_word.isupper():
+                keyboard.write('Ã')
+                strOutput.set('UÃ')
+            else:
+                keyboard.write('ã')
+                strOutput.set('uã')
             current_word = ''
         elif (str(event.name) in ['j', 'J'] or str(event.name) == '5') and current_word in ['uan', 'UAN']:
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('ạ')
-            strOutput.set('uạ')
+            if current_word.isupper():
+                keyboard.write('Ạ')
+                strOutput.set('UẠ')
+            else:
+                keyboard.write('ạ')
+                strOutput.set('uạ')
             current_word = ''
         elif str(event.name) == '=' and current_word in ['uan', 'UAN']:
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('a')
-            strOutput.set('ua')
+            if current_word.isupper():
+                keyboard.write('A')
+                strOutput.set('UA')
+            else:
+                keyboard.write('a')
+                strOutput.set('ua')
             current_word = ''
         ### check 'g', following 'uan'
         elif str(event.name) in ['g', 'G'] and current_word in ['uan', 'UAN']:
@@ -259,48 +351,72 @@ def on_press_key(event):
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('á')
-            strOutput.set('uá')
+            if current_word.isupper():
+                keyboard.write('Á')
+                strOutput.set('UÁ')
+            else:
+                keyboard.write('á')
+                strOutput.set('uá')
             current_word = ''
         elif (str(event.name) in ['f', 'F'] or str(event.name) == '2') and current_word in ['uang', 'UANG']:
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('à')
-            strOutput.set('uà')
+            if current_word.isupper():
+                keyboard.write('À')
+                strOutput.set('UÀ')
+            else:
+                keyboard.write('à')
+                strOutput.set('uà')
             current_word = ''
         elif (str(event.name) in ['w', 'W'] or str(event.name) == '3') and current_word in ['uang', 'UANG']:
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('ả')
-            strOutput.set('uả')
+            if current_word.isupper():
+                keyboard.write('Ả')
+                strOutput.set('UẢ')
+            else:
+                keyboard.write('ả')
+                strOutput.set('uả')
             current_word = ''
         elif (str(event.name) in ['o', 'O'] or str(event.name) == '4') and current_word in ['uang', 'UANG']:
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('ã')
-            strOutput.set('uã')
+            if current_word.isupper():
+                keyboard.write('Ã')
+                strOutput.set('UÃ')
+            else:
+                keyboard.write('ã')
+                strOutput.set('uã')
             current_word = ''
         elif (str(event.name) in ['j', 'J'] or str(event.name) == '5') and current_word in ['uang', 'UANG']:
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('ạ')
-            strOutput.set('uạ')
+            if current_word.isupper():
+                keyboard.write('Ạ')
+                strOutput.set('UẠ')
+            else:
+                keyboard.write('ạ')
+                strOutput.set('uạ')
             current_word = ''
         elif str(event.name) == '=' and current_word in ['uang', 'UANG']:
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('a')
-            strOutput.set('ua')
+            if current_word.isupper():
+                keyboard.write('A')
+                strOutput.set('UA')
+            else:
+                keyboard.write('a')
+                strOutput.set('ua')
             current_word = ''
         ### check 'y', following 'u' -> uye
         elif str(event.name) in ['y', 'Y'] and current_word in ['u', 'U']:
@@ -311,43 +427,67 @@ def on_press_key(event):
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('iế')
-            strOutput.set('uiế')
+            if current_word.isupper():
+                keyboard.write('IẾ')
+                strOutput.set('UIẾ')
+            else:
+                keyboard.write('iế')
+                strOutput.set('uiế')
             current_word = ''
         elif (str(event.name) in ['f', 'F'] or str(event.name) == '2') and current_word in ['uye', 'UYE']:
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('iề')
-            strOutput.set('uiề')
+            if current_word.isupper():
+                keyboard.write('IỀ')
+                strOutput.set('UIỀ')
+            else:
+                keyboard.write('iề')
+                strOutput.set('uiề')
             current_word = ''
         elif (str(event.name) in ['w', 'W'] or str(event.name) == '3') and current_word in ['uye', 'UYE']:
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('iể')
-            strOutput.set('uiể')
+            if current_word.isupper():
+                keyboard.write('IỂ')
+                strOutput.set('UIỂ')
+            else:
+                keyboard.write('iể')
+                strOutput.set('uiể')
             current_word = ''
         elif (str(event.name) in ['o', 'O'] or str(event.name) == '4') and current_word in ['uye', 'UYE']:
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('iễ')
-            strOutput.set('uiễ')
+            if current_word.isupper():
+                keyboard.write('IỄ')
+                strOutput.set('UIỄ')
+            else:
+                keyboard.write('iễ')
+                strOutput.set('uiễ')
             current_word = ''
         elif (str(event.name) in ['j', 'J'] or str(event.name) == '5') and current_word in ['uye', 'UYE']:
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('iệ')
-            strOutput.set('uiệ')
+            if current_word.isupper():
+                keyboard.write('IỆ')
+                strOutput.set('UIỆ')
+            else:
+                keyboard.write('iệ')
+                strOutput.set('uiệ')
             current_word = ''
         elif str(event.name) == '=' and current_word in ['uye', 'UYE']:
             keyboard.send('backspace')
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('iê')
-            strOutput.set('uiê')
+            if current_word.isupper():
+                keyboard.write('IÊ')
+                strOutput.set('UIÊ')
+            else:
+                keyboard.write('iê')
+                strOutput.set('uiê')
             current_word = ''
 
         # check start with 'i'
@@ -360,63 +500,107 @@ def on_press_key(event):
         elif (str(event.name) in ['s', 'S'] or str(event.name) == '1') and current_word in ['ia', 'IA']:
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('ế')
-            strOutput.set('ế')
+            if current_word.isupper():
+                keyboard.write('Ế')
+                strOutput.set('IẾ')            
+            else:
+                keyboard.write('ế')
+                strOutput.set('iế')
             current_word = ''
         elif (str(event.name) in ['f', 'F'] or str(event.name) == '2') and current_word in ['ia', 'IA']:
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('ề')
-            strOutput.set('ề')
+            if current_word.isupper():
+                keyboard.write('Ề')
+                strOutput.set('IỀ')            
+            else:
+                keyboard.write('ề')
+                strOutput.set('iề')
             current_word = ''
         elif (str(event.name) in ['w', 'W'] or str(event.name) == '3') and current_word in ['ia', 'IA']:
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('ể')
-            strOutput.set('ể')
+            if current_word.isupper():
+                keyboard.write('Ể')
+                strOutput.set('IỂ')            
+            else:
+                keyboard.write('ể')
+                strOutput.set('iể')
             current_word = ''
         elif (str(event.name) in ['o', 'O'] or str(event.name) == '4') and current_word in ['ia', 'IA']:
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('ễ')
-            strOutput.set('ễ')
+            if current_word.isupper():
+                keyboard.write('Ễ')
+                strOutput.set('IỄ')            
+            else:
+                keyboard.write('ễ')
+                strOutput.set('iễ')
             current_word = ''
         elif (str(event.name) in ['j', 'J'] or str(event.name) == '5') and current_word in ['ia', 'IA']:
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('ệ')
-            strOutput.set('ệ')
+            if current_word.isupper():
+                keyboard.write('Ệ')
+                strOutput.set('IỆ')            
+            else:
+                keyboard.write('ệ')
+                strOutput.set('iệ')
             current_word = ''
         elif str(event.name) == '=' and current_word in ['ia', 'IA']:
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('ê')
-            strOutput.set('ê')
+            if current_word.isupper():
+                keyboard.write('Ê')
+                strOutput.set('IÊ')            
+            else:
+                keyboard.write('ê')
+                strOutput.set('iê')
             current_word = ''
 
         elif str(event.name) in ['q', 'Q'] and len(current_word) == 0:
             keyboard.send('backspace')
-            keyboard.write('k')
-            strOutput.set('k')
+            if current_word.isupper():
+                keyboard.write('K')
+                strOutput.set('K')
+            else:
+                keyboard.write('k')
+                strOutput.set('k')
         elif (str(event.name) in ['d', 'D'] or str(event.name) in ['r', 'R']) and len(current_word) == 0:
             keyboard.send('backspace')
-            keyboard.write('z')
-            strOutput.set('z')
+            if current_word.isupper():
+                keyboard.write('Z')
+                strOutput.set('Z')
+            else:
+                keyboard.write('z')
+                strOutput.set('z')
         elif str(event.name) in ['x', 'X'] and len(current_word) == 0:
             keyboard.send('backspace')
-            keyboard.write('s')
-            strOutput.set('s')
+            if current_word.isupper():
+                keyboard.write('S')
+                strOutput.set('S')
+            else:
+                keyboard.write('s')
+                strOutput.set('s')
         elif str(event.name) in ['c', 'C']:
             current_word = str(event.name)
 
             keyboard.send('backspace')
-            keyboard.write('k')
-            strOutput.set('k')
+            if current_word.isupper():
+                keyboard.write('K')
+                strOutput.set('K')
+            else:
+                keyboard.write('k')
+                strOutput.set('k')
         elif str(event.name) in ['h', 'H'] and current_word in ['c', 'C']:
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('c')
-            strOutput.set('c')
+            if current_word.isupper():
+                keyboard.write('C')
+                strOutput.set('C')
+            else:
+                keyboard.write('c')
+                strOutput.set('c')
             current_word = ''
 
         # tr
@@ -425,46 +609,70 @@ def on_press_key(event):
         elif str(event.name) in ['r', 'R'] and current_word in ['t', 'T']:
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('c')
-            strOutput.set('c')
+            if current_word.isupper():
+                keyboard.write('C')
+                strOutput.set('C')
+            else:
+                keyboard.write('c')
+                strOutput.set('c')
         ## th
         elif str(event.name) in ['h', 'H'] and current_word in ['t', 'T']:
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('q')
-            strOutput.set('q')
+            if current_word.isupper():
+                keyboard.write('Q')
+                strOutput.set('Q')
+            else:
+                keyboard.write('q')
+                strOutput.set('q')
         # gi
         elif str(event.name) in ['g', 'G']:
             current_word = str(event.name)
         elif str(event.name) in ['i', 'I'] and current_word in ['g', 'G']:
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('z')
-            strOutput.set('z')
+            if current_word.isupper():
+                keyboard.write('Z')
+                strOutput.set('Z')
+            else:
+                keyboard.write('z')
+                strOutput.set('z')
         # nh
         elif str(event.name) in ['n', 'N']:
             current_word = str(event.name)
         elif str(event.name) in ['h', 'H'] and current_word in ['n', 'N']:
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('ń')
-            strOutput.set('ń')
+            if current_word.isupper():
+                keyboard.write('Ń')
+                strOutput.set('Ń')
+            else:
+                keyboard.write('ń')
+                strOutput.set('ń')
         # ph
         elif str(event.name) in ['p', 'P']:
             current_word = str(event.name)
         elif str(event.name) in ['h', 'H'] and current_word in ['p', 'P']:
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('f')
-            strOutput.set('f')
+            if current_word.isupper():
+                keyboard.write('F')
+                strOutput.set('F')
+            else:
+                keyboard.write('f')
+                strOutput.set('f')
         # kh
         elif str(event.name) in ['k', 'K']:
             current_word = str(event.name)
         elif str(event.name) in ['h', 'H'] and current_word in ['k', 'K']:
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('x')
-            strOutput.set('x')
+            if current_word.isupper():
+                keyboard.write('X')
+                strOutput.set('X')
+            else:
+                keyboard.write('x')
+                strOutput.set('x')
         # ng
         elif str(event.name) in ['n', 'N']:
             current_word = str(event.name)
@@ -473,8 +681,12 @@ def on_press_key(event):
 
             keyboard.send('backspace')
             keyboard.send('backspace')
-            keyboard.write('w')
-            strOutput.set('w')
+            if current_word.isupper():
+                keyboard.write('W')
+                strOutput.set('W')
+            else:
+                keyboard.write('w')
+                strOutput.set('w')
         # ngh
         elif str(event.name) in ['h', 'H'] and current_word in ['ng', 'NG']:
             keyboard.send('backspace') # did check and correct on 'ng'
