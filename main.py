@@ -702,6 +702,8 @@ def on_press_key(event):
             current_word = ''
         else:
             current_word = ''
+    else:
+        current_word = ''
 
 keyboard.on_press(on_press_key)
 
