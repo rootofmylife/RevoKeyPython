@@ -189,7 +189,7 @@ def on_press_key(event):
             keyboard.send('backspace')
             if current_word.isupper():
                 keyboard.write('Ạ')
-                strOutput.set('U Ạ')
+                strOutput.set('UẠ')
             else:
                 keyboard.write('ạ')
                 strOutput.set('uạ')
